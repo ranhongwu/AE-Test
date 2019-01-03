@@ -70,7 +70,7 @@ namespace Query_2
             comboBox1.SelectedIndex = 0;
             comboBox2.SelectedIndex = 0;
         }
-
+        //而无法
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             string layerName;
