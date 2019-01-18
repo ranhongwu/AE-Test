@@ -37,6 +37,8 @@
             this.根据空间位置选择ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.清除选择ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.地图选择集ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.选择操作选项ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.统计ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.axTOCControl1 = new ESRI.ArcGIS.Controls.AxTOCControl();
             this.axMapControl1 = new ESRI.ArcGIS.Controls.AxMapControl();
             this.axLicenseControl1 = new ESRI.ArcGIS.Controls.AxLicenseControl();
@@ -52,7 +54,9 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.文件ToolStripMenuItem,
             this.属性查询ToolStripMenuItem,
-            this.地图选择集ToolStripMenuItem});
+            this.地图选择集ToolStripMenuItem,
+            this.选择操作选项ToolStripMenuItem,
+            this.统计ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1073, 25);
@@ -66,11 +70,12 @@
             this.文件ToolStripMenuItem.Name = "文件ToolStripMenuItem";
             this.文件ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
             this.文件ToolStripMenuItem.Text = "文件";
+            
             // 
             // 打开ToolStripMenuItem
             // 
             this.打开ToolStripMenuItem.Name = "打开ToolStripMenuItem";
-            this.打开ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+            this.打开ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.打开ToolStripMenuItem.Text = "打开";
             this.打开ToolStripMenuItem.Click += new System.EventHandler(this.打开ToolStripMenuItem_Click);
             // 
@@ -112,6 +117,20 @@
             this.地图选择集ToolStripMenuItem.Text = "地图选择集";
             this.地图选择集ToolStripMenuItem.Click += new System.EventHandler(this.地图选择集ToolStripMenuItem_Click);
             // 
+            // 选择操作选项ToolStripMenuItem
+            // 
+            this.选择操作选项ToolStripMenuItem.Name = "选择操作选项ToolStripMenuItem";
+            this.选择操作选项ToolStripMenuItem.Size = new System.Drawing.Size(92, 21);
+            this.选择操作选项ToolStripMenuItem.Text = "选择操作选项";
+            this.选择操作选项ToolStripMenuItem.Click += new System.EventHandler(this.选择操作选项ToolStripMenuItem_Click);
+            // 
+            // 统计ToolStripMenuItem
+            // 
+            this.统计ToolStripMenuItem.Name = "统计ToolStripMenuItem";
+            this.统计ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
+            this.统计ToolStripMenuItem.Text = "统计";
+            this.统计ToolStripMenuItem.Click += new System.EventHandler(this.统计ToolStripMenuItem_Click);
+            // 
             // axTOCControl1
             // 
             this.axTOCControl1.Location = new System.Drawing.Point(0, 41);
@@ -127,6 +146,7 @@
             this.axMapControl1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axMapControl1.OcxState")));
             this.axMapControl1.Size = new System.Drawing.Size(837, 526);
             this.axMapControl1.TabIndex = 2;
+            this.axMapControl1.OnViewRefreshed += new ESRI.ArcGIS.Controls.IMapControlEvents2_Ax_OnViewRefreshedEventHandler(this.axMapControl1_OnViewRefreshed);
             // 
             // axLicenseControl1
             // 
@@ -183,6 +203,8 @@
         private System.Windows.Forms.ToolStripMenuItem 根据空间位置选择ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 清除选择ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 地图选择集ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 选择操作选项ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 统计ToolStripMenuItem;
 
     }
 }

@@ -18,7 +18,6 @@ namespace Query_2
         #region 定义变量
         private IMap currentMap;
         private IFeatureLayer currentFeatureLayer;
-
         public IMap CurrentMap
         {
             set { currentMap = value; }
@@ -30,6 +29,7 @@ namespace Query_2
             InitializeComponent();
         }
 
+        //加载窗体时生成treeView中的节点信息
         private void SelectionSet_Load(object sender, EventArgs e)
         {
             IFeatureLayer pFeatureLayer;
@@ -72,6 +72,7 @@ namespace Query_2
             label1.Text = "当前共选择了 " + currentMap.SelectionCount + " 个要素";
         }
 
+        //点击treeView节点时dataGridView显示选择图层的属性表
         private void treeView1_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
         {
             dataGridView1.Rows.Clear();
@@ -124,5 +125,7 @@ namespace Query_2
             pActiveView.Extent = pEnvelope;
             pActiveView.Refresh();
         }
+
+
     }
 }

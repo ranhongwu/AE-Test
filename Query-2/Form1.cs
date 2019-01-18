@@ -82,5 +82,28 @@ namespace Query_2
             SelectSetForm.CurrentMap = axMapControl1.Map;
             SelectSetForm.ShowDialog();
         }
+
+        private void 选择操作选项ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void 统计ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Statistic StatForm = new Statistic();
+            StatForm.CurrentMap = axMapControl1.Map;
+            StatForm.ShowDialog();
+        }
+
+        private void axMapControl1_OnViewRefreshed(object sender, ESRI.ArcGIS.Controls.IMapControlEvents2_OnViewRefreshedEvent e)
+        {
+            if (axMapControl1.Map.SelectionCount > 0)
+            {
+                统计ToolStripMenuItem.Enabled = true;
+            }
+            else
+                统计ToolStripMenuItem.Enabled = false;
+        }
+
     }
 }
